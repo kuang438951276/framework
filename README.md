@@ -136,7 +136,7 @@ dependencies {
 
 ```
 
-#本地maven私服库
+# 本地maven私服库
 
 # Android 项目部署之Nexus私服搭建和应用
 
