@@ -153,4 +153,4 @@ dependencies {
 &emsp;把压缩包解压之后进入bin文件夹就可以运行cmd命令来启动nexus,通过查看bin/nexus脚本发现可以修改脚本来适配自己的需求,例如修改Nexus的root路径,如果需要以root身份来启动Nexus就需要设置RUN_AS_USER=root,设置app名字和登陆名字等.也可以去conf/nexus.properties文件修改端口之类的信息. 
 
 &emsp;接下来直接运行Nexus脚本,进入解压之后的文件夹的bin目录下，使用cmd命令nexus start启动服务
-![image](https://github.com/kuang438951276/framework/tree/master/img/1.png)
+![image](https://raw.githubusercontent.com/kuang438951276/framework/master/img/1.png)
