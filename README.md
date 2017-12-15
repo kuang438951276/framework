@@ -135,3 +135,21 @@ dependencies {
 }
 
 ```
+
+#本地maven私服库
+
+# Android 项目部署之Nexus私服搭建和应用
+
+## 一、概述
+ &emsp;Nexus是一个基于maven的仓库管理的社区项目.主要的使用场景就是可以在局域网搭建一个maven私服,用来部署第三方公共构件或者作为远程仓库在该局域网的一个代理.简单举几个例子就是:
+### 1.第三方Jar包可以放在nexus上,项目可以直接通过Url和路径配置直接引用.方便进行统一管理.
+### 2.同时有多个项目在开发的时候,一些共用基础模块可以单独抽取到nexus上,需要用的项目直接从nexus上拉取就行
+### 3.一些封闭开发的过程中开发机是不能上公网的,所以连接central repository和下载jar就比较麻烦,这时就可以用nexus搭建起来一个介于公网和局域网之间的桥梁.
+## 二、搭建
+### 1.下载&配置
+
+&emsp;这里使用的是Nexus OSS开源版,官网下载地址:http://www.sonatype.org/nexus/go/ 
+
+&emsp;把压缩包解压之后进入bin文件夹就可以运行cmd命令来启动nexus,通过查看bin/nexus脚本发现可以修改脚本来适配自己的需求,例如修改Nexus的root路径,如果需要以root身份来启动Nexus就需要设置RUN_AS_USER=root,设置app名字和登陆名字等.也可以去conf/nexus.properties文件修改端口之类的信息. 
+
+&emsp;接下来直接运行Nexus脚本,进入解压之后的文件夹的bin目录下，使用cmd命令nexus start启动服务
